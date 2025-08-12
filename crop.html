@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Crop Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}?v=4">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌾 Smart Core</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Smart Crop Recommendation System 🌱</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+
+        {% if prediction %}
+            <div class="prediction">
+                <h2>Recommended Crop: <strong>{{ prediction }}</strong></h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
