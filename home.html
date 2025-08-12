@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Smart Crop Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}?v=10">
+</head>
+<body>
+   <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌾 Smart Core</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Image Carousel -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="{% static 'Img1.jpg' %}" alt="Img1" style="width:300px; height:auto;">
+                <img src="{% static 'Img2.jpg' %}" alt="Img2" style="width:300px; height:auto;">
+                <img src="{% static 'Img3.jpg' %}" alt="Img3" style="width:300px; height:auto;">
+                <img src="{% static 'Img4.jpg' %}" alt="Img4" style="width:300px; height:auto;">
+                <!-- Repeat for seamless scroll -->
+                <img src="{% static 'Img1.jpg' %}" alt="Img1" style="width:300px; height:auto;">
+                <img src="{% static 'Img3.jpg' %}" alt="Img2" style="width:300px; height:auto;">
+                <img src="{% static 'Img2.jpg' %}" alt="Img3" style="width:300px; height:auto;">
+                <img src="{% static 'Img4.jpg' %}" alt="Img4" style="width:300px; height:auto;">
+            </div>
+        </div>
+        <h1>Welcome to Smart Crop Recommendation System 🌱</h1>
+        <p>This system helps farmers decide the best crop to grow based on soil nutrients and weather conditions using machine learning.</p>
+    
+    </div>
+</body>
+</html>
+
