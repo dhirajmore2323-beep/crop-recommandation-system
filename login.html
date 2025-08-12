@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Smart Crop System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌾 Smart Core</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>🔐 Login to <span style="color:#4CAF50;">🌱 Smart Crop System</span></h2>
+        <p style="font-size:1.1rem; color:#333; margin-bottom:15px;">Welcome back! <span style="font-size:1.3rem;">👩‍🌾</span> Enter your credentials to access <b>crop recommendations</b> and personalized features. <span style="font-size:1.2rem;">🌾🌻🌽</span></p>
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color:rgb(19, 19, 20);"> {{ message }}</p>
+            {% endfor %}
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="👤 Username" required><br>
+            <input type="password" name="password" placeholder="🔒 Password" required><br>
+            <button type="submit" style="font-size:1.1rem;">➡️ Login</button>
+        </form>
+    </div>
+</body>
+</html>
