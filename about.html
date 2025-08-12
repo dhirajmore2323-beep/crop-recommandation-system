@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About - Smart Crop Recommendation System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}?v=6">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌾 Smart Core</div>
+            <ul class="nav-links">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div style="text-align:left; margin-left:0;">
+        <h1>Smart Crop Recommendation System 🌱</h1>
+        <p>
+            The Smart Crop Recommendation System is a web-based platform that helps farmers and agricultural experts 
+            identify the most suitable crop to grow based on key soil parameters like Nitrogen, Phosphorus, Potassium, 
+            pH, temperature, humidity, and rainfall.
+        </p>
+        <p>
+            Built using <strong>Django</strong> and integrated with machine learning algorithms like 
+            <strong>Random Forest, Decision Tree, and KNN</strong>, this system improves yield and promotes sustainable farming.
+        </p>
+        <p>
+            The system encourages smart agriculture by providing accurate crop recommendations, which helps maximize output, 
+            reduce crop failure, and protect environmental resources.
+        </p>
+        </div>
+
+        <div style="text-align:left; margin-left:0;">
+        <h2>🔧 Technologies Used</h2>
+            <ul>
+                <li>🐍 Python & Django Framework</li>
+                <li>🧠 Machine Learning (Random Forest, KNN, Decision Tree)</li>
+                <li>💻 HTML, CSS</li>
+                <li>📊 Scikit-learn, Pandas, NumPy</li>
+                <li>📝 Django Forms & Model Integration</li>
+            </ul>
+            <h2>📈 Features</h2>
+            <ul>
+                <li>🌾 Crop Prediction based on Soil Parameters</li>
+                <li>📊 Data Visualization of Soil Conditions</li>
+                <li>🔍 User-friendly Interface for Easy Navigation</li>
+                <li>📚 Educational Resources on Smart Agriculture</li>
+                <li>📱 Responsive Design for Mobile and Desktop</li>
+            </ul>
+        </div>
+
+        <section class="developer">
+            <h1>Project by smart Core | Internship 2025</h1>
+            <h2>👨‍💻 Developer</h2>
+            <p><strong>👤Name:</strong> Dhiraj More,Sanika Thorat</p>
+
+            <p><strong>📧Email:</strong> <a href="mailto:dhiraj.more@email.com">dhiraj.more@email.com</a></p>
+            <p><strong>📧Email:</strong> <a href="mailto:sanika.thorat@email.com">sanika.thorat@email.com</a></p>
+            <p><strong>🌐GitHub:</strong> <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+        </section>
+    </div>
+</body>
+</html>
